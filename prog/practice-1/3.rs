@@ -1,7 +1,7 @@
 use std::io::Read;
 use std::fs::File;
 
-ㅡ
+
 fn main () {
 
     let mut file_ptr = match File::open("hello.txt") {
