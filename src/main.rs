@@ -1,25 +1,17 @@
-use std::fmt::Display;
 
-struct Point<T> {
-    x: T,
+struct Point {
+    x: i32,
+    y: i32
 }
 
-impl<T> Point<T>
-{
-    pub fn new(x: T) -> Point<T> {
-        Point{
-            x
-        }
-    }
-    pub fn do_something<U,V,W>(&self, y: U, a: V, b: W) {
-        println!("{}{}{}{}",self.x,y,a,b);
-    }
-
-}
 
 fn main() {
 
-    let point = Point::new(1);
-    point.do_something(1,2,4);
+    let x = Some("hello");
+    let y = 10;
 
+    match x {
+        Some(&x)if x == y => println!("case 1"),
+        _ => println!("case 2")
+    }
 }
